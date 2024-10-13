@@ -1,0 +1,48 @@
+﻿<Window x:Class="_0auth_client.SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_0auth_client"
+        mc:Ignorable="d"
+        Title="SignUp" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="backBT" Content="Назад" Margin="20,20,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="82"/>
+
+        <TextBlock Text="Регистрация в систему" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+                <TextBlock Text="Логин" HorizontalAlignment="Center" Margin="10" FontSize="18"/>
+                <TextBox x:Name="loginTB" Width="180" Margin="10" HorizontalAlignment="Center" FontSize="18"/>
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Пароль" HorizontalAlignment="Center" Margin="10" FontSize="18"/>
+                        <PasswordBox x:Name="passwordTB" Width="180" Margin="10" HorizontalAlignment="Center" FontSize="18"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Повторите пароль" HorizontalAlignment="Center" Margin="10" FontSize="18"/>
+                        <PasswordBox x:Name="passwordSecondTB" Width="180" Margin="10" HorizontalAlignment="Center" FontSize="18"/>
+                    </StackPanel>
+                </StackPanel>
+                <Button x:Name="signUpBT" Content="Зарегистрироваться" Width="250" Height="35" Margin="20,60,20,20" FontSize="18" Click="signUpBT_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+                <TextBlock Text="Фамилия" HorizontalAlignment="Center" Margin="10" FontSize="18"/>
+                <TextBox x:Name="surNameTB" Width="180" Height="30" Margin="10" HorizontalAlignment="Center" FontSize="18"/>
+                <TextBlock Text="Имя" HorizontalAlignment="Center" Margin="10" FontSize="18"/>
+                <TextBox x:Name="nameTB" Width="180" Height="30" Margin="10" HorizontalAlignment="Center" FontSize="18"/>
+                <TextBlock Text="Отчество" HorizontalAlignment="Center" Margin="10" FontSize="18"/>
+                <TextBox x:Name="patronymicTB" Width="180" Height="30" Margin="10" HorizontalAlignment="Center" FontSize="18"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="1" VerticalAlignment="Bottom" Margin="0">
+        </StackPanel>
+    </Grid>
+</Window>

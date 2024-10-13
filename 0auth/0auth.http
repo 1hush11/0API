@@ -1,0 +1,6 @@
+@_0auth_HostAddress = http://localhost:5117
+
+GET {{_0auth_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

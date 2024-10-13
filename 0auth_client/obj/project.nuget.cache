@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "u3W0AyWzpuM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\0auth_client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HASH\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
