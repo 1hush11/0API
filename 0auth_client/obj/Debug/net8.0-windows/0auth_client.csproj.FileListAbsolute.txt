@@ -28,3 +28,4 @@ C:\Users\HASH\source\repos\0auth\0auth_client\obj\Debug\net8.0-windows\MenuProdu
 C:\Users\HASH\source\repos\0auth\0auth_client\obj\Debug\net8.0-windows\MenuProducts.baml
 C:\Users\HASH\source\repos\0auth\0auth_client\obj\Debug\net8.0-windows\ItemProductUC.g.cs
 C:\Users\HASH\source\repos\0auth\0auth_client\obj\Debug\net8.0-windows\ItemProductUC.baml
+C:\Users\HASH\source\repos\0auth\0auth_client\obj\Debug\net8.0-windows\0auth_client.sourcelink.json

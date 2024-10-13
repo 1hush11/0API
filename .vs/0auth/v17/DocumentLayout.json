@@ -3,76 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\HASH\\source\\repos\\0auth\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|solutionrelative:0auth\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\menuproducts.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\menuproducts.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\menuproducts.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\menuproducts.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|solutionrelative:0auth\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\data\\api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\data\\api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\itemproductuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\itemproductuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\itemproductuc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\itemproductuc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth\\model\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|solutionrelative:0auth\\model\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\model\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\model\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\itemproductuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\itemproductuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\data\\api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\data\\api.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|solutionrelative:0auth\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|solutionrelative:0auth\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth\\model\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|solutionrelative:0auth\\model\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|solutionrelative:0auth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\model\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\model\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\itemproductuc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\itemproductuc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\menuproducts.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\menuproducts.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\menuproducts.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\menuproducts.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|solutionrelative:0auth_client\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{697BDC6B-CA41-4596-A5D1-5BFA09722197}|0auth\\0auth.csproj|solutionrelative:0auth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7A12E210-5232-410E-B118-0799C9F5882A}|0auth_client\\0auth_client.csproj|c:\\users\\hash\\source\\repos\\0auth\\0auth_client\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,17 +86,17 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "API.cs",
               "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\Data\\API.cs",
               "RelativeDocumentMoniker": "0auth_client\\Data\\API.cs",
               "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\Data\\API.cs",
               "RelativeToolTip": "0auth_client\\Data\\API.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAiwDgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAiwDkAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-26T08:43:07.44Z",
               "IsPinned": true,
@@ -116,13 +104,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "0auth\\Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "0auth\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAwwA8AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwBoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T15:10:21.252Z",
               "IsPinned": true,
@@ -130,13 +118,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "MenuProducts.xaml.cs",
               "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\MenuProducts.xaml.cs",
               "RelativeDocumentMoniker": "0auth_client\\MenuProducts.xaml.cs",
               "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\MenuProducts.xaml.cs",
               "RelativeToolTip": "0auth_client\\MenuProducts.xaml.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAkwHwAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAkwHwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T17:21:43.044Z",
               "IsPinned": true,
@@ -168,31 +156,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProductType.cs",
-              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\Model\\ProductType.cs",
-              "RelativeDocumentMoniker": "0auth_client\\Model\\ProductType.cs",
-              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\Model\\ProductType.cs",
-              "RelativeToolTip": "0auth_client\\Model\\ProductType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T20:27:15.02Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Manufacturer.cs",
-              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Model\\Manufacturer.cs",
-              "RelativeDocumentMoniker": "0auth\\Model\\Manufacturer.cs",
-              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Model\\Manufacturer.cs",
-              "RelativeToolTip": "0auth\\Model\\Manufacturer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T19:31:24.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\Model\\Product.cs",
@@ -206,32 +169,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Model\\Product.cs",
-              "RelativeDocumentMoniker": "0auth\\Model\\Product.cs",
-              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Model\\Product.cs",
-              "RelativeToolTip": "0auth\\Model\\Product.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAiwBUAAAAPAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "ProductType.cs",
+              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\Model\\ProductType.cs",
+              "RelativeDocumentMoniker": "0auth_client\\Model\\ProductType.cs",
+              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\Model\\ProductType.cs",
+              "RelativeToolTip": "0auth_client\\Model\\ProductType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T18:00:47.954Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MenuProducts.xaml",
-              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\MenuProducts.xaml",
-              "RelativeDocumentMoniker": "0auth_client\\MenuProducts.xaml",
-              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\MenuProducts.xaml",
-              "RelativeToolTip": "0auth_client\\MenuProducts.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-13T17:44:57.503Z",
+              "WhenOpened": "2024-10-13T20:27:15.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Program.cs",
+              "RelativeDocumentMoniker": "0auth\\Program.cs",
+              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Program.cs",
+              "RelativeToolTip": "0auth\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T17:07:29.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "0auth_client\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\MainWindow.xaml.cs",
+              "RelativeToolTip": "0auth_client\\MainWindow.xaml.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAiwCsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T20:54:49.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SignUp.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\SignUp.xaml.cs",
+              "RelativeDocumentMoniker": "0auth_client\\SignUp.xaml.cs",
+              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\SignUp.xaml.cs",
+              "RelativeToolTip": "0auth_client\\SignUp.xaml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwCIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T18:03:04.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ItemProductUC.xaml",
+              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\ItemProductUC.xaml",
+              "RelativeDocumentMoniker": "0auth_client\\ItemProductUC.xaml",
+              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\ItemProductUC.xaml",
+              "RelativeToolTip": "0auth_client\\ItemProductUC.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-13T18:16:18.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "0auth\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "0auth\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA+wCUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T20:24:18.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ItemProductUC.xaml.cs",
               "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\ItemProductUC.xaml.cs",
               "RelativeDocumentMoniker": "0auth_client\\ItemProductUC.xaml.cs",
@@ -244,43 +259,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ItemProductUC.xaml",
-              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\ItemProductUC.xaml",
-              "RelativeDocumentMoniker": "0auth_client\\ItemProductUC.xaml",
-              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\ItemProductUC.xaml",
-              "RelativeToolTip": "0auth_client\\ItemProductUC.xaml",
+              "DocumentIndex": 11,
+              "Title": "MenuProducts.xaml",
+              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\MenuProducts.xaml",
+              "RelativeDocumentMoniker": "0auth_client\\MenuProducts.xaml",
+              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\MenuProducts.xaml",
+              "RelativeToolTip": "0auth_client\\MenuProducts.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-13T18:16:18.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "0auth_client\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\MainWindow.xaml.cs",
-              "RelativeToolTip": "0auth_client\\MainWindow.xaml.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAiwDMAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T20:54:49.801Z"
+              "WhenOpened": "2024-10-13T17:44:57.503Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "0auth\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "0auth\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T20:24:18.625Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\MainWindow.xaml",
               "RelativeDocumentMoniker": "0auth_client\\MainWindow.xaml",
@@ -291,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\App.xaml",
               "RelativeDocumentMoniker": "0auth_client\\App.xaml",
@@ -303,43 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ProductType.cs",
-              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Model\\ProductType.cs",
-              "RelativeDocumentMoniker": "0auth\\Model\\ProductType.cs",
-              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Model\\ProductType.cs",
-              "RelativeToolTip": "0auth\\Model\\ProductType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T18:01:05.359Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "SignUp.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\SignUp.xaml.cs",
-              "RelativeDocumentMoniker": "0auth_client\\SignUp.xaml.cs",
-              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\SignUp.xaml.cs",
-              "RelativeToolTip": "0auth_client\\SignUp.xaml.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAUwB4AAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T18:03:04.526Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Program.cs",
-              "RelativeDocumentMoniker": "0auth\\Program.cs",
-              "ToolTip": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Program.cs",
-              "RelativeToolTip": "0auth\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T17:07:29.947Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 14,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\Model\\User.cs",
               "RelativeDocumentMoniker": "0auth_client\\Model\\User.cs",
@@ -351,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 15,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth_client\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "0auth_client\\AssemblyInfo.cs",
@@ -363,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 16,
               "Title": "UserDTO.cs",
               "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\DTO\\UserDTO.cs",
               "RelativeDocumentMoniker": "0auth\\DTO\\UserDTO.cs",
@@ -375,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 17,
               "Title": "TradeController.cs",
               "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Controllers\\TradeController.cs",
               "RelativeDocumentMoniker": "0auth\\Controllers\\TradeController.cs",
@@ -387,7 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 18,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "C:\\Users\\HASH\\source\\repos\\0auth\\0auth\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "0auth\\Controllers\\WeatherForecastController.cs",

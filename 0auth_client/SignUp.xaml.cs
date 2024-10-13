@@ -38,6 +38,10 @@ namespace _0auth_client
 
             API.Registration(user);
             MessageBox.Show("Регистрация прошла успешно");
+
+            SignUp signUp = new SignUp();
+            signUp.Show();
+            Close();
         }
     }
 }
