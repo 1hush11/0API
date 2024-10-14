@@ -73,7 +73,7 @@ namespace _0auth_client.Data
                 return new ObservableCollection<Product>();
             }
         }
-        public static async Task<ObservableCollection<ProductType>> GetProductTypesAsync()
+        public static async Task<List<ProductType>> GetProductTypesAsync()
         {
             using (var client = new HttpClient())
             {
@@ -81,10 +81,10 @@ namespace _0auth_client.Data
                 if (result.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     var jsonResponse = await result.Content.ReadAsStringAsync();
-                    var productTypes = JsonConvert.DeserializeObject<ObservableCollection<ProductType>>(jsonResponse);
-                    return new ObservableCollection<ProductType>(productTypes);
+                    var productTypes = JsonConvert.DeserializeObject<List<ProductType>>(jsonResponse);
+                    return new List<ProductType>(productTypes);
                 }
-                return new ObservableCollection<ProductType>();
+                return new List<ProductType>();
             }
         }
 

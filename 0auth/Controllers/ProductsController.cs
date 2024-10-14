@@ -20,6 +20,7 @@ namespace _0auth.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
+            //GetProductManufactrer();
             var products = await Program.context.Products
                     .ToListAsync();
             return Ok(products);
@@ -31,7 +32,7 @@ namespace _0auth.Controllers
             return Ok(manufacturers);
         }
         [HttpGet("ProductsTypes")]
-        public async Task<ActionResult<IEnumerable<ProductType>>> GetProductTypes()
+        public async Task<ActionResult<List<ProductType>>> GetProductTypes()
         {
             try
             {

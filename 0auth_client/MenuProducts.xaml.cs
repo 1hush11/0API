@@ -16,7 +16,7 @@ namespace _0auth_client
     public partial class MenuProducts : Window
     {
         public ObservableCollection<Product> Products { get; set; } = new ObservableCollection<Product>();
-        public ObservableCollection<ProductType> ProductTypes { get; set; } = new ObservableCollection<ProductType>();
+        public List<ProductType> ProductTypes { get; set; } = new List<ProductType>();
 
         public MenuProducts()
         {
