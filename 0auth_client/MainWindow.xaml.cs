@@ -45,11 +45,5 @@ namespace _0auth_client
             signUp.Show();
             Close();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MenuProducts menuProducts = new MenuProducts();
-            menuProducts.Show();
-        }
     }
 }

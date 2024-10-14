@@ -72,14 +72,14 @@ namespace _0auth_client
                     .ToList();
             }
 
-            if (filCB.SelectedItem is ProductType selectedType)
+            if (filCB.SelectedItem is ProductType selectedType && selectedType.IdProductType != 0)
             {
                 filteredProducts = filteredProducts
                     .Where(p => p.IdProductType == selectedType.IdProductType)
                     .ToList();
             }
 
-            if (sorCB.SelectedItem is string selectedSort)
+            if (sorCB.SelectedItem is string selectedSort && !string.IsNullOrEmpty(selectedSort))
             {
                 switch (selectedSort)
                 {
@@ -91,6 +91,7 @@ namespace _0auth_client
                         break;
                 }
             }
+
 
             UpdateListView(filteredProducts);
         }

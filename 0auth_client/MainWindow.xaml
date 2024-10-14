@@ -26,6 +26,5 @@
             <Button x:Name="logInBT" Content="Войти" Width="200" Height="35" Margin="20" FontSize="18" VerticalAlignment="Bottom" Click="logInBT_Click"/>
             <Button x:Name="signUpBT" Style="{StaticResource smallBUTStyle}" Width="200" Height="35" Content="Зарегистрироваться" FontSize="18" Click="signUpBT_Click"/>
         </StackPanel>
-        <Button Content="Быстрый вход" Click="Button_Click"/>
     </Grid>
 </Window>

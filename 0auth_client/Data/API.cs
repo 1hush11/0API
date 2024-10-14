@@ -17,6 +17,10 @@ namespace _0auth_client.Data
     {
         public static async Task<User?> Auth(string login, string password)
         {
+            if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
+            {
+                throw new ArgumentException("Логин и пароль не должны быть пустыми");
+            }
             using (var client = new HttpClient())
             {
                 var result = client.GetAsync($"http://localhost:5117/API/Auth/{login}, {password}").Result;
@@ -30,6 +34,20 @@ namespace _0auth_client.Data
 
         public static async Task<bool> Registration(User user)
         {
+            if (user == null)
+            {
+                throw new ArgumentNullException(nameof(user), "Данные пользователя пустые");
+            }
+
+            if (string.IsNullOrWhiteSpace(user.LoginUser))
+            {
+                throw new ArgumentException("Логин не может быть пустым");
+            }
+
+            if (string.IsNullOrWhiteSpace(user.PasswordUser))
+            {
+                throw new ArgumentException("Пароль не может быть пустым");
+            }
             using (var client = new HttpClient())
             {
                 string json = JsonConvert.SerializeObject(user);

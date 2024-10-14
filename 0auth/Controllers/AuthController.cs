@@ -19,20 +19,6 @@ namespace _0auth.Controllers
             return user == null ? NotFound("Пользователь не найден") : Ok(user);
         }
 
-        // GET: api/<AuthController>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/<AuthController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST api/<AuthController>
         [HttpPost("registration")]
         public ActionResult<User> Register([FromBody] UserDTO userDTO)
@@ -54,18 +40,6 @@ namespace _0auth.Controllers
             Program.context.Users.Add(newUser);
             Program.context.SaveChanges();
             return StatusCode(201, newUser);
-        }
-
-        // PUT api/<AuthController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<AuthController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }

@@ -35,4 +35,6 @@ public partial class Product
     public int QuantityInStock { get; set; }
 
     public virtual ProductType IdProductTypeNavigation { get; set; } = null!;
+    public virtual Manufacturer IdManufacturerNavigation { get; set; } = null!;
+
 }
