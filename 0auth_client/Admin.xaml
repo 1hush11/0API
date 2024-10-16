@@ -1,0 +1,84 @@
+﻿<Window x:Class="_0auth_client.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_0auth_client"
+        mc:Ignorable="d"
+        Title="Admin" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="logOutBT" Content="Выйти" Margin="0,8,0,0" HorizontalAlignment="Center" Width="75" Height="32" VerticalAlignment="Top" Click="logOutBT_Click"/>
+            <Label x:Name="usernameLB" Grid.Column="2" Grid.ColumnSpan="2" Content="Иванов Иван" VerticalAlignment="Center" FontSize="16" Width="250" HorizontalAlignment="Right" Margin="273,0,0,0"/>
+        </Grid>
+
+        <Label Content="Товары" Grid.Row="1" Margin="0,0,10,0" HorizontalAlignment="Right" Width="75" Height="32" VerticalAlignment="Top"/>
+
+        <Frame x:Name="edit_frame" NavigationUIVisibility="Hidden" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+
+        <Grid Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="countTB" Text="ghjkl" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <Button x:Name="addProductBT" Grid.Column="1" Margin="10,0,0,0" Height="50" VerticalAlignment="Center" HorizontalAlignment="Left" Command="{Binding OpenAdminAddPg}">
+                    <TextBlock TextAlignment="Center" Width="105"> + добавить <LineBreak/> товар</TextBlock>
+                </Button>
+            </Grid>
+            <DataGrid x:Name="productsDG" Grid.Row="1" AutoGenerateColumns="False" SelectionMode="Single" SelectionUnit="FullRow" IsReadOnly="True" Background="#252526">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Style="{StaticResource smallBUTStyle}" x:Name="deleteProd" Click="deleteProd_Click">уд.</Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Артикул" Binding="{Binding ProductArticleNumber}" Width="1*" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Наименование" Binding="{Binding NameProduct}" Width="2*" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Стоимость" Binding="{Binding CostProduct}" Width="1*" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Описание" Binding="{Binding DescriptionProduct}" Width="3*" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Тип" Binding="{Binding IdProductType}" Width="1*" IsReadOnly="False"/>
+                    <DataGridTextColumn Header="Фото" Binding="{Binding PhotoProduct}" Width="1.5*" IsReadOnly="False"/>
+                    <DataGridTextColumn Header="Поставщик" Binding="{Binding IdSupplier}" Width="1*" IsReadOnly="False"/>
+                    <DataGridTextColumn Header="Макс. скидка" Binding="{Binding MaxDiscount}" Width="1*" IsReadOnly="False"/>
+                    <DataGridTextColumn Header="Производитель" Binding="{Binding IdManufacturer}" Width="1*" IsReadOnly="False"/>
+                    <DataGridTextColumn Header="Тек. скидка" Binding="{Binding CurrentDiscount}" Width="1*" IsReadOnly="False"/>
+                    <DataGridTextColumn Header="Кол-во" Binding="{Binding QuantityInStock}" Width="1*" IsReadOnly="False"/>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Style="{StaticResource smallBUTStyle}" x:Name="editProd" Content="ред." Click="editProd_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Frame x:Name="content_frame" Grid.RowSpan="3"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -67,8 +67,8 @@ namespace _0auth_client.Data
                 {
                     var jsonResponse = await result.Content.ReadAsStringAsync();
                     var products = JsonConvert.DeserializeObject<ObservableCollection<Product>>(jsonResponse);
-                    return new ObservableCollection<Product>(products);
-
+                    if (products != null)
+                        return products;
                 }
                 return new ObservableCollection<Product>();
             }
@@ -82,11 +82,112 @@ namespace _0auth_client.Data
                 {
                     var jsonResponse = await result.Content.ReadAsStringAsync();
                     var productTypes = JsonConvert.DeserializeObject<List<ProductType>>(jsonResponse);
-                    return new List<ProductType>(productTypes);
+                    if (productTypes != null)
+                        return productTypes;
                 }
                 return new List<ProductType>();
             }
         }
+        public static async Task<List<Manufacturer>> GetManufacturerAsync()
+        {
+            using (var client = new HttpClient())
+            {
+                var result = await client.GetAsync("http://localhost:5117/API/Products/Manufacturers");
+                if (result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    var jsonResponse = await result.Content.ReadAsStringAsync();
+                    var manufacturers = JsonConvert.DeserializeObject<List<Manufacturer>>(jsonResponse);
+                    if (manufacturers != null)
+                        return new List<Manufacturer>(manufacturers);
+                }
+                return new List<Manufacturer>();
+            }
+        }
+        //public static async Task<List<ProductType>> GetProductTypes()
+        //{
+        //    using (var client = new HttpClient())
+        //    {
+        //        var result = await client.GetAsync("http://localhost:5117/API/Products/ProductsTypes");
+        //        if (result.StatusCode == System.Net.HttpStatusCode.OK)
+        //        {
+        //            return JsonConvert.DeserializeObject<List<ProductType>>(await result.Content.ReadAsStringAsync());
+        //        }
+        //        return new List<ProductType>();
+        //    }
+        //}
+        public static async Task<List<Supplier>> GetSuppliers()
+        {
+            using (var client = new HttpClient())
+            {
+                var result = await client.GetAsync("http://localhost:5117/API/Products/Suppliers");
+                if (result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+#pragma warning disable CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
+                    return JsonConvert.DeserializeObject<List<Supplier>>(await result.Content.ReadAsStringAsync());
+#pragma warning restore CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
+                }
+                return new List<Supplier>();
+            }
+        }
+        public static async Task<List<Manufacturer>> GetManufacturers()
+        {
+            using (var client = new HttpClient())
+            {
+                var result = await client.GetAsync("http://localhost:5117/API/Products/Manufacturers");
+                if (result.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+#pragma warning disable CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
+                    return JsonConvert.DeserializeObject<List<Manufacturer>>(await result.Content.ReadAsStringAsync());
+#pragma warning restore CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
+                }
+                return new List<Manufacturer>();
+            }
+        }
+        public static async Task<bool> AddProduct(Product newProduct)
+        {
+            using (var client = new HttpClient())
+            {
+                var json = JsonConvert.SerializeObject(newProduct);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
 
+                var response = await client.PostAsync("http://localhost:5117/API/Products", content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+                else
+                {
+                    var error = await response.Content.ReadAsStringAsync();
+                    MessageBox.Show($"Ошибка добавления: {error}");
+                    return false;
+                }
+            }
+        }
+
+        public static async Task<bool> UpdateProduct(Product updatedProduct)
+        {
+            using (var client = new HttpClient())
+            {
+                var json = JsonConvert.SerializeObject(updatedProduct);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await client.PutAsync("http://localhost:5117/API/Products/UpdateProduct", content);
+                if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+                {
+                    return true;
+                }
+                //if (response.IsSuccessStatusCode)
+                //{
+                //    return true;
+                //}
+                else
+                {
+                    var error = await response.Content.ReadAsStringAsync();
+                    MessageBox.Show($"Ошибка редактирования: {error}");
+                    return false;
+                }
+            }
+        }
     }
 }

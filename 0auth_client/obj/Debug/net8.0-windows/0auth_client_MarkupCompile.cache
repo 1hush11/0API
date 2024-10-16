@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\HASH\source\repos\0auth\0auth_client\App.xaml
-4996319169
+7-994900579
 
-12-258048868
+16175478332
 1991593866644
-ItemProductUC.xaml;MainWindow.xaml;MenuProducts.xaml;SignUp.xaml;
+Admin.xaml;AdminAddProduct.xaml;AdminEditProduct.xaml;ItemProductUC.xaml;MainWindow.xaml;MenuProducts.xaml;SignUp.xaml;
 
 False
 

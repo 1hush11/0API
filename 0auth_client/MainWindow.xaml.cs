@@ -29,9 +29,19 @@ namespace _0auth_client
             var result = await API.Auth(login: loginTB.Text, password: passwordTB.Text);
             if (result is User)
             {
-                MenuProducts menuProducts = new MenuProducts();
-                menuProducts.Show();
-                Close();
+                if (result.IdRole == 2)
+                {
+                    Admin admin = new Admin();
+                    admin.usernameLB.Content = result.SurnameUser + result.NameUser;
+                    admin.Show();
+                    Close();
+                }
+                else
+                {
+                    MenuProducts menuProducts = new MenuProducts();
+                    menuProducts.Show();
+                    Close();
+                }
             }
             else
             {
@@ -50,6 +60,13 @@ namespace _0auth_client
         {
             MenuProducts menuProducts = new MenuProducts();
             menuProducts.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Admin admin = new Admin();
+            admin.Show();
+            Close();
         }
     }
 }

@@ -78,6 +78,52 @@
   },
   {
     "ContainingType": "_0auth.Controllers.ProductsController",
+    "Method": "AddProduct",
+    "RelativePath": "API/Products",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newProduct",
+        "Type": "_0auth.Model.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "_0auth.Model.Product",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "_0auth.Controllers.ProductsController",
+    "Method": "GetManufacturers",
+    "RelativePath": "API/Products/Manufacturers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[_0auth.Model.Manufacturer, 0auth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "_0auth.Controllers.ProductsController",
     "Method": "GetProductManufactrer",
     "RelativePath": "API/Products/ProductsManufacturers",
     "HttpMethod": "GET",
@@ -115,6 +161,42 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "_0auth.Controllers.ProductsController",
+    "Method": "GetSuppliers",
+    "RelativePath": "API/Products/Suppliers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[_0auth.Model.Supplier, 0auth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "_0auth.Controllers.ProductsController",
+    "Method": "UpdateProduct",
+    "RelativePath": "API/Products/UpdateProduct",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatedProduct",
+        "Type": "_0auth.Model.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "_0auth.Controllers.TradeController",

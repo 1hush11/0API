@@ -7,6 +7,15 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Admin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminAddProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminEditProduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ItemProductUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -18,6 +27,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Admin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminAddProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminEditProduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ItemProductUC.xaml">
       <SubType>Designer</SubType>
     </Page>

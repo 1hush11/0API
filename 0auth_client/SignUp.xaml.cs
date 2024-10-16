@@ -26,7 +26,7 @@ namespace _0auth_client
             InitializeComponent();
         }
 
-        private void signUpBT_Click(object sender, RoutedEventArgs e)
+        private async void signUpBT_Click(object sender, RoutedEventArgs e)
         {
             User user = new User();
             user.SurnameUser = surNameTB.Text;
@@ -36,7 +36,7 @@ namespace _0auth_client
             user.PasswordUser = passwordTB.Password.ToString();
             user.IdRole = 1;
 
-            API.Registration(user);
+            await API.Registration(user);
             MessageBox.Show("Регистрация прошла успешно");
 
             MenuProducts menuProducts = new MenuProducts();

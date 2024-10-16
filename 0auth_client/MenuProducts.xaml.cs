@@ -36,7 +36,7 @@ namespace _0auth_client
 
         private async void LoadProductTypes()
         {
-            var productTypes = await API.GetProductTypesAsync();
+            List<ProductType> productTypes = await API.GetProductTypesAsync();
             filCB.Items.Clear();
             ProductTypes.Add(new ProductType { IdProductType = 0, NameProductType = "Все категории" });
             foreach (var type in productTypes)
@@ -45,8 +45,6 @@ namespace _0auth_client
             }
             filCB.ItemsSource = ProductTypes;
             filCB.DisplayMemberPath = "NameProductType";
-
-            filCB.SelectedIndex = 0;
         }
 
         private async void LoadProducts()
