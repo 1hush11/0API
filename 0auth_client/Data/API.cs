@@ -177,10 +177,10 @@ namespace _0auth_client.Data
                 {
                     return true;
                 }
-                //if (response.IsSuccessStatusCode)
-                //{
-                //    return true;
-                //}
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
                 else
                 {
                     var error = await response.Content.ReadAsStringAsync();

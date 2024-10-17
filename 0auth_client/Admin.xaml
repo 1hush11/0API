@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_0auth_client"
         mc:Ignorable="d"
-        Title="Admin" Height="600" Width="800">
+        Title="Admin" Height="700" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1.5*"/>
@@ -44,7 +44,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock x:Name="countTB" Text="ghjkl" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <TextBlock x:Name="countTB" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                 <Button x:Name="addProductBT" Grid.Column="1" Margin="10,0,0,0" Height="50" VerticalAlignment="Center" HorizontalAlignment="Left" Command="{Binding OpenAdminAddPg}">
                     <TextBlock TextAlignment="Center" Width="105"> + добавить <LineBreak/> товар</TextBlock>
                 </Button>

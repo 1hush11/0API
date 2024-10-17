@@ -33,7 +33,7 @@ public partial class Product
     public string StatusProduct { get; set; } = null!;
 
     public int QuantityInStock { get; set; }
-
+    public virtual Supplier IdSupplierNavigation { get; set; } = null!;
     public virtual ProductType IdProductTypeNavigation { get; set; } = null!;
     public virtual Manufacturer IdManufacturerNavigation { get; set; } = null!;
 

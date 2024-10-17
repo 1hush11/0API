@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:_0auth_client"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="550" d:DesignWidth="800"
       Title="AdminEditProduct">
 
     <Grid>
@@ -22,7 +22,7 @@
 
         <DockPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0, 5, 0, 5">
             <Button x:Name="exitBT" Content="Закрыть" DockPanel.Dock="Left" Margin="10,10,10,10" Height="30" Width="90" Click="exitBT_Click"/>
-            <TextBlock Text="Редактирование продукта" FontSize="19" TextAlignment="Right" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,10,0"/>
+            <TextBlock Text="Редактирование товара" FontSize="19" TextAlignment="Right" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,10,0"/>
         </DockPanel>
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
@@ -44,7 +44,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
                 <TextBlock Text="Тип: " Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
-                <ComboBox x:Name="typeCB" Width="150" Height="25" SelectedIndex="0" SelectedValue="{Binding ProductType.ProductTypeId}"/>
+                <ComboBox x:Name="typeCB" Width="150" Height="25" SelectedValue="{Binding ProductType.IdProductType}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
                 <TextBlock Text="Изображение: " Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
@@ -52,11 +52,19 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
                 <TextBlock Text="Поставщик: " Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
-                <ComboBox x:Name="supplierCB" Width="150" Height="25" SelectedIndex="0" SelectedValue="{Binding Supplier.IdSupplier}" DisplayMemberPath="NameSupplier" ItemsSource="{Binding Suppliers}"/>
+                <ComboBox x:Name="supplierCB" Width="150" Height="25" SelectedValue="{Binding Supplier.IdSupplier}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Скидка: " Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
+                <TextBox x:Name="currentDiscountTB" Text="{Binding CurrentDiscount}" Width="150" Height="25"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="Макс. скидка: " Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
+                <TextBox x:Name="maxDiscountTB" Text="{Binding MaxDiscount}" Width="150" Height="25"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
                 <TextBlock Text="Производитель: " Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
-                <ComboBox x:Name="manufacturerCB" Width="150" Height="25" SelectedIndex="0" SelectedValue="{Binding Manufacturer.IdManufacturer}" DisplayMemberPath="NameManufacturer" ItemsSource="{Binding Manufacturers}"/>
+                <ComboBox x:Name="manufacturerCB" Width="150" Height="25" SelectedValue="{Binding Manufacturer.NameManufacturer}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="5">
                 <TextBlock Text="Количество: " Width="110" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"/>
