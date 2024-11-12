@@ -35,3 +35,7 @@ C:\Users\HASH\source\repos\0auth\0auth_client\obj\Debug\net8.0-windows\AdminAddP
 C:\Users\HASH\source\repos\0auth\0auth_client\obj\Debug\net8.0-windows\AdminAddProduct.baml
 C:\Users\HASH\source\repos\0auth\0auth_client\obj\Debug\net8.0-windows\AdminEditProduct.g.cs
 C:\Users\HASH\source\repos\0auth\0auth_client\obj\Debug\net8.0-windows\AdminEditProduct.baml
+C:\Users\HASH\source\repos\0auth\0auth_client\obj\Debug\net8.0-windows\ProfileWindow.g.cs
+C:\Users\HASH\source\repos\0auth\0auth_client\obj\Debug\net8.0-windows\ProfileWindow.baml
+C:\Users\HASH\source\repos\0auth\0auth_client\obj\Debug\net8.0-windows\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\HASH\source\repos\0auth\0auth_client\obj\Debug\net8.0-windows\0auth_client.csproj.ResolveComReference.cache

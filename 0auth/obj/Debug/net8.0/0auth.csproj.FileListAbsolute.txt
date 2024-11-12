@@ -47,3 +47,6 @@ C:\Users\HASH\source\repos\0auth\0auth\bin\Debug\net8.0\Microsoft.AspNetCore.Jso
 C:\Users\HASH\source\repos\0auth\0auth\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\HASH\source\repos\0auth\0auth\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 C:\Users\HASH\source\repos\0auth\0auth\obj\Debug\net8.0\0auth.sourcelink.json
+C:\Users\HASH\source\repos\0auth\0auth\bin\Debug\net8.0\Microsoft.Office.Interop.Word.dll
+C:\Users\HASH\source\repos\0auth\0auth\obj\Debug\net8.0\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\HASH\source\repos\0auth\0auth\obj\Debug\net8.0\0auth.csproj.ResolveComReference.cache

@@ -18,6 +18,4 @@ public partial class User
     public string? PasswordUser { get; set; }
 
     public int IdRole { get; set; }
-
-   
 }

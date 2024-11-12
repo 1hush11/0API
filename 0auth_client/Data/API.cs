@@ -56,6 +56,63 @@ namespace _0auth_client.Data
                 return result.StatusCode == System.Net.HttpStatusCode.OK;
             }
         }
+        public static async Task<User?> GetCurrentUserAsync()
+        {
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    var response = await client.GetAsync("http://localhost:5117/API/Auth/current");
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var userJson = await response.Content.ReadAsStringAsync();
+                        var user = JsonConvert.DeserializeObject<User>(userJson);
+                        return user;
+                    }
+                    else
+                    {
+                        if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                        {
+                            MessageBox.Show("Пользователь не аутентифицирован.");
+                        }
+                        else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+                        {
+                            MessageBox.Show("Пользователь не найден.");
+                        }
+                        return null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка: {ex.Message}");
+                return null;
+            }
+        }
+        public static async Task<bool> UpdateUser(User updatedUser)
+        {
+            using (var client = new HttpClient())
+            {
+                var json = JsonConvert.SerializeObject(updatedUser);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await client.PutAsync("http://localhost:5117/API/Auth/UpdateUser", content);
+                if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+                {
+                    return true;
+                }
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+                else
+                {
+                    var error = await response.Content.ReadAsStringAsync();
+                    MessageBox.Show($"Ошибка редактирования: {error}");
+                    return false;
+                }
+            }
+        }
 
         public static async Task<ObservableCollection<Product>> GetProductsAsync()
         {

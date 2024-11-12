@@ -27,15 +27,8 @@ namespace _0auth.Controllers
             }
             return Ok(products);
         }
-
-        [HttpGet("ProductsManufacturers")]
-        public async Task<ActionResult<IEnumerable<Manufacturer>>> GetProductManufactrer()
-        {
-            var manufacturers = context.Manufacturers.ToList();
-            return Ok(manufacturers);
-        }
         [HttpGet("ProductsTypes")]
-        public async Task<ActionResult<List<ProductType>>> GetProductTypes()
+        public Task<ActionResult<List<ProductType>>> GetProductTypes()
         {
             try
             {
@@ -45,30 +38,30 @@ namespace _0auth.Controllers
 
                     if (productTypes == null || productTypes.Count == 0)
                     {
-                        return NotFound("Типы продуктов не найдены.");
+                        return Task.FromResult<ActionResult<List<ProductType>>>(NotFound("Типы продуктов не найдены."));
                     }
 
-                    return Ok(productTypes);
+                    return Task.FromResult<ActionResult<List<ProductType>>>(Ok(productTypes));
                 }
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Произошла ошибка: {ex.Message}");
+                return Task.FromResult<ActionResult<List<ProductType>>>(StatusCode(500, $"Произошла ошибка: {ex.Message}"));
             }
         }
 
         [HttpGet("Suppliers")]
-        public async Task<ActionResult<IEnumerable<Supplier>>> GetSuppliers()
+        public Task<ActionResult<IEnumerable<Supplier>>> GetSuppliers()
         {
             var suppliers = context.Suppliers.ToList();
-            return Ok(suppliers);
+            return Task.FromResult<ActionResult<IEnumerable<Supplier>>>(Ok(suppliers));
         }
 
         [HttpGet("Manufacturers")]
-        public async Task<ActionResult<IEnumerable<Manufacturer>>> GetManufacturers()
+        public Task<ActionResult<IEnumerable<Manufacturer>>> GetManufacturers()
         {
             var manufacturers = context.Manufacturers.ToList();
-            return Ok(manufacturers);
+            return Task.FromResult<ActionResult<IEnumerable<Manufacturer>>>(Ok(manufacturers));
         }
 
         [HttpPost]

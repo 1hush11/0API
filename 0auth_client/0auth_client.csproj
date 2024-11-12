@@ -18,9 +18,22 @@
     <None Remove="Resources\P927R2.jpg" />
     <None Remove="Resources\P936E4.jpg" />
     <None Remove="Resources\picture.png" />
+    <None Remove="Resources\profile_image.png" />
     <None Remove="Resources\S563T4.jpg" />
     <None Remove="Resources\V483R7.jpg" />
     <None Remove="Resources\V783T5.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>7</VersionMinor>
+      <VersionMajor>8</VersionMajor>
+      <Guid>00020905-0000-0000-c000-000000000046</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -36,6 +49,7 @@
     <Resource Include="Resources\P927R2.jpg" />
     <Resource Include="Resources\P936E4.jpg" />
     <Resource Include="Resources\picture.png" />
+    <Resource Include="Resources\profile_image.png" />
     <Resource Include="Resources\S563T4.jpg" />
     <Resource Include="Resources\V483R7.jpg" />
     <Resource Include="Resources\V783T5.jpg" />

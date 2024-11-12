@@ -28,7 +28,8 @@
             <Label x:Name="usernameLB" Grid.Column="2" Grid.ColumnSpan="2" Content="Иванов Иван" VerticalAlignment="Center" FontSize="16" Width="250" HorizontalAlignment="Right" Margin="273,0,0,0"/>
         </Grid>
 
-        <Label Content="Товары" Grid.Row="1" Margin="0,0,10,0" HorizontalAlignment="Right" Width="75" Height="32" VerticalAlignment="Top"/>
+        <Label Content="Товары" Grid.Row="1" Margin="0,3,10,0" HorizontalAlignment="Right" Width="75" Height="32" VerticalAlignment="Top"/>
+        <Button x:Name="exportProdBT" Content="Экспорт товаров" Grid.Row="1" Grid.Column="1" Margin="10,0,0,0" HorizontalAlignment="Left" Width="180" Height="40" VerticalAlignment="Top" Click="exportProdBT_Click"/>
 
         <Frame x:Name="edit_frame" NavigationUIVisibility="Hidden" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
 
@@ -51,7 +52,7 @@
             </Grid>
             <DataGrid x:Name="productsDG" Grid.Row="1" AutoGenerateColumns="False" SelectionMode="Single" SelectionUnit="FullRow" IsReadOnly="True" Background="#252526">
                 <DataGrid.Columns>
-                    <DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Уд.">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Style="{StaticResource smallBUTStyle}" x:Name="deleteProd" Click="deleteProd_Click">уд.</Button>
@@ -69,7 +70,7 @@
                     <DataGridTextColumn Header="Производитель" Binding="{Binding IdManufacturer}" Width="1*" IsReadOnly="False"/>
                     <DataGridTextColumn Header="Тек. скидка" Binding="{Binding CurrentDiscount}" Width="1*" IsReadOnly="False"/>
                     <DataGridTextColumn Header="Кол-во" Binding="{Binding QuantityInStock}" Width="1*" IsReadOnly="False"/>
-                    <DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Ред.">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Style="{StaticResource smallBUTStyle}" x:Name="editProd" Content="ред." Click="editProd_Click"/>

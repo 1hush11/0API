@@ -5,39 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_0auth_client"
         mc:Ignorable="d"
-        Title="MenuProducts" Height="450" Width="800">
+        Title="MenuProducts" Height="450" Width="890">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="8*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal">
-            <Label Content="Сортировка:" Grid.Column="0" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <ComboBox Name="sorCB" Grid.Column="1" Margin="11,0,0,0" Width="142"
-                      SelectedIndex="0"
-                      ItemsSource="{Binding Sorts}" Height="23" VerticalAlignment="Center" HorizontalAlignment="Left"
-                      SelectionChanged="sorCB_SelectionChanged"/>
 
-            <Label Content="Фильтр:" Grid.Column="2" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="30,0,0,0"/>
-            <ComboBox Name="filCB" Grid.Column="3" Margin="10,0,0,0" Width="142"
-                      Height="23" VerticalAlignment="Center" HorizontalAlignment="Left"
-                      SelectionChanged="filCB_SelectionChanged" SelectedIndex="0"/>
-
-            <TextBox x:Name="searchTB" Grid.Column="4" Margin="50,0,0,0" FontSize="16"  
-                     Height="23" VerticalAlignment="Center" HorizontalAlignment="Left" Width="142"
-                     TextChanged="searchTB_TextChanged"/>
+        <Frame x:Name="contentFR" Grid.RowSpan="3"/>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Label Content="Количество товаров: " VerticalAlignment="Center"/>
+            <TextBlock x:Name="countTB" VerticalAlignment="Center"/>
+            <Button x:Name="profileBT" Margin="400,0,0,0" Width="170" Height="55" Click="profileBT_Click">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Label VerticalAlignment="Center" Content="Профиль" Margin="5,0,0,0"/>
+                    <Image VerticalAlignment="Center" Width="50" Height="50" Source="Resources/profile_image.png"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
-        <ListView x:Name="productsLV" Background="#525252" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Row="1" BorderBrush="#525252">
-            <ListView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <UniformGrid Columns="2" />
-                </ItemsPanelTemplate>
-            </ListView.ItemsPanel>
-        </ListView>
-        <StackPanel Grid.Row="2" Orientation="Horizontal">
-            <Label Content="Количество товаров: "/>
-            <TextBlock x:Name="countTB"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <StackPanel Orientation="Vertical" Margin="10">
+                <Label Content="Сортировка:" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                <ComboBox Name="sorCB" Margin="0,0,0,0" Width="142"
+                              SelectedIndex="0"
+                              ItemsSource="{Binding Sorts}" Height="23" VerticalAlignment="Center" HorizontalAlignment="Center"
+                              SelectionChanged="sorCB_SelectionChanged"/>
+
+                <Label Content="Фильтр:" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                <ComboBox Name="filCB" Margin="0,0,0,0" Width="142"
+                              Height="23" VerticalAlignment="Center" HorizontalAlignment="Center"
+                              SelectionChanged="filCB_SelectionChanged" SelectedIndex="0"/>
+
+                <Label Content="Поиск:" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0"/>
+                <TextBox x:Name="searchTB" Margin="0,0,0,0" FontSize="16"  
+                             Height="23" VerticalAlignment="Center" HorizontalAlignment="Center" Width="142"
+                             TextChanged="searchTB_TextChanged"/>
+            </StackPanel>
+            <ListView x:Name="productsLV" Background="#525252" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Row="1" BorderBrush="#525252">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="2" />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+            </ListView>
         </StackPanel>
     </Grid>
 </Window>

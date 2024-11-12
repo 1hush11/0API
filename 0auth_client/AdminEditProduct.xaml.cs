@@ -29,10 +29,7 @@ namespace _0auth_client
     public partial class AdminEditProduct : Page
     {
         public static Product productToEdit = new Product();
-
-        public ObservableCollection<Supplier> Suppliers { get; set; } = new ObservableCollection<Supplier>();
-        public ObservableCollection<Manufacturer> Manufacturers { get; set; } = new ObservableCollection<Manufacturer>();
-        public List<ProductType> ProductTypes { get; set; } = new List<ProductType>();
+        private Product originalProduct;
 
         public AdminEditProduct(Product _productToEdit)
         {
@@ -40,7 +37,23 @@ namespace _0auth_client
 
             DataContext = _productToEdit;
             productToEdit = _productToEdit;
-            
+            originalProduct = new Product
+            {
+                ProductArticleNumber = _productToEdit.ProductArticleNumber,
+                NameProduct = _productToEdit.NameProduct,
+                MeasureProduct = _productToEdit.MeasureProduct,
+                CostProduct = _productToEdit.CostProduct,
+                DescriptionProduct = _productToEdit.DescriptionProduct,
+                IdProductType = _productToEdit.IdProductType,
+                PhotoProduct = _productToEdit.PhotoProduct,
+                IdSupplier = _productToEdit.IdSupplier,
+                MaxDiscount = _productToEdit.MaxDiscount,
+                CurrentDiscount = _productToEdit.CurrentDiscount,
+                IdManufacturer = _productToEdit.IdManufacturer,
+                QuantityInStock = _productToEdit.QuantityInStock,
+                StatusProduct = _productToEdit.StatusProduct
+            };
+
             LoadData();
         }
         private void LoadData()
@@ -52,46 +65,38 @@ namespace _0auth_client
 
         private async void LoadProductTypes()
         {
-            List<ProductType> productTypes = await API.GetProductTypesAsync();
-            foreach (var type in productTypes)
-            {
-                ProductTypes.Add(type);
-            }
-            typeCB.ItemsSource = ProductTypes;
+            typeCB.ItemsSource = await API.GetProductTypesAsync();
             typeCB.DisplayMemberPath = "NameProductType";
             typeCB.SelectedValuePath = "IdProductType";
-            typeCB.SelectedIndex = 0;
-            int _value = 0; 
         }
 
         private async void LoadSuppliers()
         {
-            List<Supplier> suppliers = await API.GetSuppliers();
-            foreach (var supplier in suppliers)
-            {
-                Suppliers.Add(supplier);
-            }
-            supplierCB.ItemsSource = Suppliers;
+            supplierCB.ItemsSource = await API.GetSuppliers();
             supplierCB.DisplayMemberPath = "NameSupplier";
             supplierCB.SelectedValuePath = "IdSupplier";
         }
 
         private async void LoadManufacturers()
         {
-            List<Manufacturer> manufacturers = await API.GetManufacturerAsync();
-            manufacturerCB.Items.Clear();
-            foreach (var manufacturer in manufacturers)
-            {
-                Manufacturers.Add(manufacturer);
-            }
-            manufacturerCB.ItemsSource = Manufacturers;
+            manufacturerCB.ItemsSource = await API.GetManufacturerAsync();
             manufacturerCB.DisplayMemberPath = "NameManufacturer";
             manufacturerCB.SelectedValuePath = "IdManufacturer";
         }
 
         private void canselBT_Click(object sender, RoutedEventArgs e)
         {
-
+            articleTB.Text = originalProduct.ProductArticleNumber;
+            nameTB.Text = originalProduct.NameProduct;
+            costTB.Text = originalProduct.CostProduct.ToString();
+            descTB.Text = originalProduct.DescriptionProduct;
+            typeCB.SelectedValue = originalProduct.IdProductType;
+            imageTB.Text = originalProduct.PhotoProduct;
+            supplierCB.SelectedValue = originalProduct.IdSupplier;
+            maxDiscountTB.Text = originalProduct.MaxDiscount.ToString();
+            currentDiscountTB.Text = originalProduct.CurrentDiscount.ToString();
+            manufacturerCB.SelectedValue = originalProduct.IdManufacturer;
+            quantityTB.Text = originalProduct.QuantityInStock.ToString();
         }
 
         private void exitBT_Click(object sender, RoutedEventArgs e)
@@ -121,14 +126,13 @@ namespace _0auth_client
                 IdSupplierNavigation = new Supplier { IdSupplier = (int)supplierCB.SelectedValue },
                 IdProductTypeNavigation = new ProductType { IdProductType = (int)typeCB.SelectedValue },
                 IdManufacturerNavigation = new Manufacturer { IdManufacturer = (int)manufacturerCB.SelectedValue }
-
             };
 
             bool isUpdated = await API.UpdateProduct(updateProduct);
             if (isUpdated)
             {
                 MessageBox.Show("Товар успешно обновлен");
-                //NavigationService.GoBack();
+                this.Visibility = Visibility.Hidden;
             }
         }
 

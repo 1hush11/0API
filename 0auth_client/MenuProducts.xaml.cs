@@ -128,5 +128,18 @@ namespace _0auth_client
         {
             ApplyFilters();
         }
+
+        private async void profileBT_Click(object sender, RoutedEventArgs e)
+        {
+            var result = await API.GetCurrentUserAsync();
+            if (result != null)
+            {
+                ProfileWindow profileWindow = new ProfileWindow();
+                profileWindow.Show();
+                Close();
+            }
+            else
+                MessageBox.Show("Возможно, вы не авторизованы");
+        }
     }
 }
