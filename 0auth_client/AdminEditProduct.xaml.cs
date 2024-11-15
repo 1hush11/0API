@@ -132,6 +132,7 @@ namespace _0auth_client
             if (isUpdated)
             {
                 MessageBox.Show("Товар успешно обновлен");
+                Admin.admin.productsDG.Items.Refresh();
                 this.Visibility = Visibility.Hidden;
             }
         }

@@ -66,7 +66,13 @@ namespace _0auth_client
         {
             Product selectedProduct = (Product)productsDG.SelectedItem;
             AdminEditProduct adminEditProduct = new AdminEditProduct(selectedProduct);
-            content_frame.NavigationService.Navigate(adminEditProduct, Visibility.Visible);
+            contentFR.NavigationService.Navigate(adminEditProduct, Visibility.Visible);
+        }
+
+        private void addProductBT_Click(object sender, RoutedEventArgs e)
+        {
+            AdminAddProduct adminAddProduct = new AdminAddProduct();
+            contentFR.NavigationService.Navigate(adminAddProduct, Visibility.Visible);
         }
 
         private void logOutBT_Click(object sender, RoutedEventArgs e)
@@ -76,42 +82,39 @@ namespace _0auth_client
             Close();
         }
 
-        private void deleteProd_Click(object sender, RoutedEventArgs e)
+        private async void deleteProd_Click(object sender, RoutedEventArgs e)
         {
-
+            string idSelectedProduct = ((Product)productsDG.SelectedItem).ProductArticleNumber;
+            bool isDeleted = await API.DeleteProduct(idSelectedProduct);
+            if (isDeleted)
+            {
+                MessageBox.Show($"Товар с артикулом {idSelectedProduct} успешно удалён", "Успех");
+                productsDG.Items.Refresh();
+            }
+            else
+                MessageBox.Show($"Ошибка при удалении товара с артикулом {idSelectedProduct}", "Ошибка");
         }
 
         private void exportProdBT_Click(object sender, RoutedEventArgs e)
         {
             int rowCount = productsDG.Items.Count;
-            int columnCount = productsDG.Columns.Count;
-            Object[,] dataExport = new Object[rowCount+1, columnCount+1];
+            int columnCount = productsDG.Columns.Count - 2;
+            Object[,] dataExport = new Object[rowCount, columnCount];
 
             int r = 0;
             foreach (Product product in Products)
             {
-                //dataExport[r, 0] = product.ProductArticleNumber;
-                //dataExport[r, 1] = product.NameProduct;
-                //dataExport[r, 2] = product.CostProduct;
-                //dataExport[r, 3] = product.DescriptionProduct;
-                //dataExport[r, 4] = product.IdProductTypeNavigation?.NameProductType ?? "Не задано";
-                //dataExport[r, 5] = product.PhotoProduct;
-                //dataExport[r, 6] = product.IdSupplierNavigation?.NameSupplier ?? "Не задано";  
-                //dataExport[r, 7] = product.MaxDiscount;
-                //dataExport[r, 8] = product.IdManufacturerNavigation?.NameManufacturer ?? "Не задано";
-                //dataExport[r, 9] = product.CurrentDiscount;
-                //dataExport[r, 10] = product.QuantityInStock + product.MeasureProduct;
-                dataExport[r, 1] = product.ProductArticleNumber;
-                dataExport[r, 2] = product.NameProduct;
-                dataExport[r, 3] = product.CostProduct;
-                dataExport[r, 4] = product.DescriptionProduct ?? "Не задано";
-                dataExport[r, 5] = product.IdProductType;
-                dataExport[r, 6] = product.PhotoProduct ?? "Не задано";
-                dataExport[r, 7] = product.IdSupplier;
-                dataExport[r, 8] = product.MaxDiscount ?? 0;
-                dataExport[r, 9] = product.IdManufacturer;
-                dataExport[r, 10] = product.CurrentDiscount ?? 0;
-                dataExport[r, 11] = product.QuantityInStock + product.MeasureProduct;
+                dataExport[r, 0] = product.ProductArticleNumber;
+                dataExport[r, 1] = product.NameProduct;
+                dataExport[r, 2] = product.CostProduct;
+                dataExport[r, 3] = product.DescriptionProduct ?? "Не задано";
+                dataExport[r, 4] = product.IdProductType;
+                dataExport[r, 5] = product.PhotoProduct ?? "Не задано";
+                dataExport[r, 6] = product.IdSupplier;
+                dataExport[r, 7] = product.MaxDiscount ?? 0;
+                dataExport[r, 8] = product.IdManufacturer;
+                dataExport[r, 9] = product.CurrentDiscount ?? 0;
+                dataExport[r, 10] = product.QuantityInStock + product.MeasureProduct;
 
                 r++;
             }
@@ -157,9 +160,9 @@ namespace _0auth_client
             document.Application.Selection.Tables[1].Rows[1].Range.Font.Name = "Times New Roman";
             document.Application.Selection.Tables[1].Rows[1].Range.Font.Size = 13;
 
-            for (int c = 0; c <= columnCount - 1; c++)
+            for (int c = 1; c < productsDG.Columns.Count - 1; c++)
             {
-                document.Application.Selection.Tables[1].Cell(1, c + 1).Range.Text = productsDG.Columns[c].Header.ToString();
+                document.Application.Selection.Tables[1].Cell(1, c).Range.Text = productsDG.Columns[c].Header.ToString();
             }
 
             document.Application.Selection.Tables[1].Rows[1].Select();

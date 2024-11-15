@@ -36,7 +36,7 @@ namespace _0auth_client
             user.PasswordUser = passwordTB.Password.ToString();
             user.IdRole = 1;
 
-            await API.Registration(user);
+            await API.SignUp(user);
             MessageBox.Show("Регистрация прошла успешно");
 
             MenuProducts menuProducts = new MenuProducts();

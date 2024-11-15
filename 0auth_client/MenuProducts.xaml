@@ -15,9 +15,10 @@
 
         <Frame x:Name="contentFR" Grid.RowSpan="3"/>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button x:Name="logOutBT" Content="Выйти" Width="100" Height="35" Margin="10,0,20,0" Click="logOutBT_Click"/>
             <Label Content="Количество товаров: " VerticalAlignment="Center"/>
             <TextBlock x:Name="countTB" VerticalAlignment="Center"/>
-            <Button x:Name="profileBT" Margin="400,0,0,0" Width="170" Height="55" Click="profileBT_Click">
+            <Button x:Name="profileBT" Margin="350,0,0,0" Width="170" Height="55" Click="profileBT_Click">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                     <Label VerticalAlignment="Center" Content="Профиль" Margin="5,0,0,0"/>
                     <Image VerticalAlignment="Center" Width="50" Height="50" Source="Resources/profile_image.png"/>

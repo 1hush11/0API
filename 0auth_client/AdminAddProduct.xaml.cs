@@ -27,11 +27,39 @@ namespace _0auth_client
         public AdminAddProduct()
         {
             InitializeComponent();
+
+            LoadData();
+        }
+        private void LoadData()
+        {
+            LoadProductTypes();
+            LoadSuppliers();
+            LoadManufacturers();
         }
 
+        private async void LoadProductTypes()
+        {
+            typeCB.ItemsSource = await API.GetProductTypesAsync();
+            typeCB.DisplayMemberPath = "NameProductType";
+            typeCB.SelectedValuePath = "IdProductType";
+        }
+
+        private async void LoadSuppliers()
+        {
+            supplierCB.ItemsSource = await API.GetSuppliers();
+            supplierCB.DisplayMemberPath = "NameSupplier";
+            supplierCB.SelectedValuePath = "IdSupplier";
+        }
+
+        private async void LoadManufacturers()
+        {
+            manufacturerCB.ItemsSource = await API.GetManufacturerAsync();
+            manufacturerCB.DisplayMemberPath = "NameManufacturer";
+            manufacturerCB.SelectedValuePath = "IdManufacturer";
+        }
         private void exitBT_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Visibility = Visibility.Hidden;
         }
 
         private async void addProd_Click(object sender, RoutedEventArgs e)
@@ -52,10 +80,18 @@ namespace _0auth_client
                 QuantityInStock = int.TryParse(quantityTB.Text, out int quantity) ? quantity : 0,
                 StatusProduct = ""
             };
-            var result = await API.AddProduct(newProduct);
-            MessageBox.Show("Товар добавлен.");
-            Admin.admin.LoadProducts();
-            this.Visibility = Visibility.Hidden;
+
+            bool result = await API.AddProduct(newProduct);
+            if (result)
+            {
+                MessageBox.Show("Товар добавлен", "Успех");
+                Admin.admin.LoadProducts();
+                this.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                MessageBox.Show("Ошибка добавления товара", "Ошибка!");
+            }
         }
     }
 }

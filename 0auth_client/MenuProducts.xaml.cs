@@ -141,5 +141,14 @@ namespace _0auth_client
             else
                 MessageBox.Show("Возможно, вы не авторизованы");
         }
+
+        private async void logOutBT_Click(object sender, RoutedEventArgs e)
+        {
+            await API.LogOutUser();
+
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Close();
+        }
     }
 }

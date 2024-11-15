@@ -1,39 +1,8 @@
 [
   {
     "ContainingType": "_0auth.Controllers.AuthController",
-    "Method": "Get",
-    "RelativePath": "api/Auth/{login}, {password}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "login",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "password",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "_0auth.Model.User",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "_0auth.Controllers.AuthController",
     "Method": "GetCurrentUser",
-    "RelativePath": "api/Auth/current",
+    "RelativePath": "API/Auth/GetCurrentUser",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -52,8 +21,49 @@
   },
   {
     "ContainingType": "_0auth.Controllers.AuthController",
-    "Method": "Register",
-    "RelativePath": "api/Auth/registration",
+    "Method": "LogIn",
+    "RelativePath": "API/Auth/LogIn",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "_0auth.Model.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "_0auth.Controllers.AuthController",
+    "Method": "LogOutUser",
+    "RelativePath": "API/Auth/LogOutUser",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "_0auth.Controllers.AuthController",
+    "Method": "SignUp",
+    "RelativePath": "API/Auth/SignUp",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -79,7 +89,7 @@
   {
     "ContainingType": "_0auth.Controllers.AuthController",
     "Method": "UpdateUser",
-    "RelativePath": "api/Auth/UpdateUser",
+    "RelativePath": "API/Auth/UpdateUser",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -94,35 +104,15 @@
   },
   {
     "ContainingType": "_0auth.Controllers.ProductsController",
-    "Method": "GetProducts",
-    "RelativePath": "API/Products",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[_0auth.Model.Product, 0auth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "_0auth.Controllers.ProductsController",
     "Method": "AddProduct",
-    "RelativePath": "API/Products",
+    "RelativePath": "API/Products/AddProduct",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "newProduct",
-        "Type": "_0auth.Model.Product",
+        "Name": "newProductDTO",
+        "Type": "_0auth.Model.ProductDTO",
         "IsRequired": true
       }
     ],
@@ -140,8 +130,24 @@
   },
   {
     "ContainingType": "_0auth.Controllers.ProductsController",
+    "Method": "DeleteProduct",
+    "RelativePath": "API/Products/DeleteProduct",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "_0auth.Controllers.ProductsController",
     "Method": "GetManufacturers",
-    "RelativePath": "API/Products/Manufacturers",
+    "RelativePath": "API/Products/GetManufacturers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -160,8 +166,28 @@
   },
   {
     "ContainingType": "_0auth.Controllers.ProductsController",
+    "Method": "GetProducts",
+    "RelativePath": "API/Products/GetProducts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[_0auth.Model.Product, 0auth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "_0auth.Controllers.ProductsController",
     "Method": "GetProductTypes",
-    "RelativePath": "API/Products/ProductsTypes",
+    "RelativePath": "API/Products/GetProductTypes",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -181,7 +207,7 @@
   {
     "ContainingType": "_0auth.Controllers.ProductsController",
     "Method": "GetSuppliers",
-    "RelativePath": "API/Products/Suppliers",
+    "RelativePath": "API/Products/GetSuppliers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

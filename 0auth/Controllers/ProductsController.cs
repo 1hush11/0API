@@ -17,7 +17,7 @@ namespace _0auth.Controllers
             context = _context;
         }
         // GET: API/Products
-        [HttpGet]
+        [HttpGet("GetProducts")]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
             var products = await context.Products.ToListAsync();
@@ -27,7 +27,7 @@ namespace _0auth.Controllers
             }
             return Ok(products);
         }
-        [HttpGet("ProductsTypes")]
+        [HttpGet("GetProductTypes")]
         public Task<ActionResult<List<ProductType>>> GetProductTypes()
         {
             try
@@ -50,34 +50,55 @@ namespace _0auth.Controllers
             }
         }
 
-        [HttpGet("Suppliers")]
+        [HttpGet("GetSuppliers")]
         public Task<ActionResult<IEnumerable<Supplier>>> GetSuppliers()
         {
             var suppliers = context.Suppliers.ToList();
             return Task.FromResult<ActionResult<IEnumerable<Supplier>>>(Ok(suppliers));
         }
 
-        [HttpGet("Manufacturers")]
+        [HttpGet("GetManufacturers")]
         public Task<ActionResult<IEnumerable<Manufacturer>>> GetManufacturers()
         {
             var manufacturers = context.Manufacturers.ToList();
             return Task.FromResult<ActionResult<IEnumerable<Manufacturer>>>(Ok(manufacturers));
         }
 
-        [HttpPost]
-        public async Task<ActionResult<Product>> AddProduct([FromBody] Product newProduct)
+        [HttpPost("AddProduct")]
+        public async Task<ActionResult<Product>> AddProduct([FromBody] ProductDTO newProductDTO)
         {
-            if (newProduct == null)
+            if (newProductDTO == null)
             {
                 return BadRequest("Неверные данные продукта.");
             }
 
+            var existingProduct = context.Products.FirstOrDefault(p => p.ProductArticleNumber == newProductDTO.ProductArticleNumber);
+            if (existingProduct != null) { return Conflict("Продукт с таким артикулом уже существует"); }
+
             try
             {
-                await context.Products.AddAsync(newProduct);
-                await context.SaveChangesAsync();
 
-                return CreatedAtAction(nameof(GetProducts), new { id = newProduct.ProductArticleNumber }, newProduct);
+                var newProduct = new Product
+                {
+                    ProductArticleNumber = newProductDTO.ProductArticleNumber,
+                    NameProduct = newProductDTO.NameProduct,
+                    MeasureProduct = newProductDTO.MeasureProduct,
+                    CostProduct = newProductDTO.CostProduct,
+                    DescriptionProduct = newProductDTO.DescriptionProduct,
+                    IdProductType = newProductDTO.IdProductType,
+                    PhotoProduct = newProductDTO.PhotoProduct,
+                    IdSupplier = newProductDTO.IdSupplier,
+                    MaxDiscount = newProductDTO.MaxDiscount,
+                    IdManufacturer = newProductDTO.IdManufacturer,
+                    CurrentDiscount = newProductDTO.CurrentDiscount,
+                    StatusProduct = newProductDTO.StatusProduct,
+                    QuantityInStock = newProductDTO.QuantityInStock
+                };
+
+                context.Products.Add(newProduct);
+                context.SaveChanges();
+
+                return StatusCode(201, newProduct);
             }
             catch (Exception ex)
             {
@@ -122,6 +143,19 @@ namespace _0auth.Controllers
             {
                 return StatusCode(500, $"Ошибка при обновлении продукта: {ex.Message}");
             }
+        }
+        [HttpPut("DeleteProduct")]
+        public async Task<IActionResult> DeleteProduct([FromBody] string id)
+        {
+            var existingProduct = context.Products.FirstOrDefault(p => p.ProductArticleNumber == id);
+            if (existingProduct != null)
+            {
+                context.Products.Remove(existingProduct);
+                await context.SaveChangesAsync();
+                return Ok($"Товар с артикулом {id} удалён.");
+            }
+            else
+                return StatusCode(500, "Ошибка при удалении продукта.");
         }
     }
 }

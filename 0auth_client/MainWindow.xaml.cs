@@ -26,7 +26,7 @@ namespace _0auth_client
 
         private async void logInBT_Click(object sender, RoutedEventArgs e)
         {
-            var result = await API.Auth(login: loginTB.Text, password: passwordTB.Text);
+            var result = await API.LogIn(login: loginTB.Text, password: passwordTB.Text);
             if (result is User)
             {
                 if (result.IdRole == 2)

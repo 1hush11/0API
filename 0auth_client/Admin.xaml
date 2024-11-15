@@ -46,7 +46,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock x:Name="countTB" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                <Button x:Name="addProductBT" Grid.Column="1" Margin="10,0,0,0" Height="50" VerticalAlignment="Center" HorizontalAlignment="Left" Command="{Binding OpenAdminAddPg}">
+                <Button x:Name="addProductBT" Grid.Column="1" Margin="10,0,0,0" Height="50" VerticalAlignment="Center" HorizontalAlignment="Left" Click="addProductBT_Click">
                     <TextBlock TextAlignment="Center" Width="105"> + добавить <LineBreak/> товар</TextBlock>
                 </Button>
             </Grid>
@@ -79,7 +79,7 @@
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
-            <Frame x:Name="content_frame" Grid.RowSpan="3"/>
+            <Frame x:Name="contentFR" Grid.RowSpan="3" NavigationUIVisibility="Hidden"/>
         </Grid>
     </Grid>
 </Window>

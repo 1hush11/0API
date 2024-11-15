@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 namespace _0auth.Controllers
 {
 
-    [Route("api/[controller]")]
+    [Route("API/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
@@ -20,8 +20,8 @@ namespace _0auth.Controllers
         {
             this.context = context;
         }
-        [HttpGet("{login}, {password}")]
-        public ActionResult<User?> Get(string login, string password)
+        [HttpGet("LogIn")]
+        public ActionResult<User?> LogIn(string login, string password)
         {
             User? user = context.Users.Where(user => user.PasswordUser == password && user.LoginUser == login).FirstOrDefault();
             if (user != null)
@@ -30,8 +30,8 @@ namespace _0auth.Controllers
         }
 
         // POST api/<AuthController>
-        [HttpPost("registration")]
-        public ActionResult<User> Register([FromBody] UserDTO userDTO)
+        [HttpPost("SignUp")]
+        public ActionResult<User> SignUp([FromBody] UserDTO userDTO)
         {
             var existingUser = context.Users.FirstOrDefault(u => u.LoginUser == userDTO.LoginUser);
             if (existingUser != null) { return Conflict("Пользователь с таким логином уже существует."); }
@@ -52,7 +52,7 @@ namespace _0auth.Controllers
             Program.context.SaveChanges();
             return StatusCode(201, newUser);
         }
-        [HttpGet("current")]
+        [HttpGet("GetCurrentUser")]
         public ActionResult<User?> GetCurrentUser()
         {
             if (_currentUser != null)
@@ -102,5 +102,12 @@ namespace _0auth.Controllers
                 return StatusCode(500, $"Ошибка при обновлении пользователя: {ex.Message}");
             }
         }
+        [HttpPut("LogOutUser")]
+        public ActionResult LogOutUser()
+        {
+            _currentUser = null;
+            return NoContent();
+        }
+
     }
 }

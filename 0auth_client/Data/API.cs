@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace _0auth_client.Data
 {
     public static class API
     {
-        public static async Task<User?> Auth(string login, string password)
+        public static async Task<User?> LogIn(string login, string password)
         {
             if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
             {
@@ -23,7 +24,7 @@ namespace _0auth_client.Data
             }
             using (var client = new HttpClient())
             {
-                var result = client.GetAsync($"http://localhost:5117/API/Auth/{login}, {password}").Result;
+                var result = client.GetAsync($"http://localhost:5117/API/Auth/LogIn?login={login}&password={password}").Result;
                 if (result.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     return JsonConvert.DeserializeObject<User>((await result.Content.ReadAsStringAsync()));
@@ -32,7 +33,7 @@ namespace _0auth_client.Data
             }
         }
 
-        public static async Task<bool> Registration(User user)
+        public static async Task<bool> SignUp(User user)
         {
             if (user == null)
             {
@@ -52,7 +53,7 @@ namespace _0auth_client.Data
             {
                 string json = JsonConvert.SerializeObject(user);
                 StringContent jsonContent = new(json, Encoding.UTF8, "application/json");
-                var result = await client.PostAsync("http://localhost:5117/API/Auth/registration", jsonContent);
+                var result = await client.PostAsync("http://localhost:5117/API/Auth/SignUp", jsonContent);
                 return result.StatusCode == System.Net.HttpStatusCode.OK;
             }
         }
@@ -113,12 +114,36 @@ namespace _0auth_client.Data
                 }
             }
         }
+        public static async Task LogOutUser()
+        {
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    var response = await client.GetAsync("http://localhost:5117/API/Auth/LogOutUser");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Выход из профиля выполнен успешно.", "Успех");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Ошибка!\nНе получилось выйти из профиля: {response.ReasonPhrase}", "Ошибка");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при выходе из профиля: {ex.Message}", "Ошибка");
+            }
+        }
+
 
         public static async Task<ObservableCollection<Product>> GetProductsAsync()
         {
             using (var client = new HttpClient())
             {
-                var result = await client.GetAsync("http://localhost:5117/API/Products");
+                var result = await client.GetAsync("http://localhost:5117/API/Products/GetProducts");
 
                 if (result.StatusCode == System.Net.HttpStatusCode.OK)
                 {
@@ -134,7 +159,7 @@ namespace _0auth_client.Data
         {
             using (var client = new HttpClient())
             {
-                var result = await client.GetAsync("http://localhost:5117/API/Products/ProductsTypes");
+                var result = await client.GetAsync("http://localhost:5117/API/Products/GetProductTypes");
                 if (result.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     var jsonResponse = await result.Content.ReadAsStringAsync();
@@ -149,7 +174,7 @@ namespace _0auth_client.Data
         {
             using (var client = new HttpClient())
             {
-                var result = await client.GetAsync("http://localhost:5117/API/Products/Manufacturers");
+                var result = await client.GetAsync("http://localhost:5117/API/Products/GetManufacturers");
                 if (result.StatusCode == System.Net.HttpStatusCode.OK)
                 {
                     var jsonResponse = await result.Content.ReadAsStringAsync();
@@ -176,7 +201,7 @@ namespace _0auth_client.Data
         {
             using (var client = new HttpClient())
             {
-                var result = await client.GetAsync("http://localhost:5117/API/Products/Suppliers");
+                var result = await client.GetAsync("http://localhost:5117/API/Products/GetSuppliers");
                 if (result.StatusCode == System.Net.HttpStatusCode.OK)
                 {
 #pragma warning disable CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
@@ -207,7 +232,7 @@ namespace _0auth_client.Data
                 var json = JsonConvert.SerializeObject(newProduct);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                var response = await client.PostAsync("http://localhost:5117/API/Products", content);
+                var response = await client.PostAsync("http://localhost:5117/API/Products/AddProduct", content);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -242,6 +267,31 @@ namespace _0auth_client.Data
                 {
                     var error = await response.Content.ReadAsStringAsync();
                     MessageBox.Show($"Ошибка редактирования: {error}");
+                    return false;
+                }
+            }
+        }
+
+        public static async Task<bool> DeleteProduct(string id)
+        {
+            using (var client = new HttpClient())
+            {
+                var json = JsonConvert.SerializeObject(id);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await client.PutAsync($"http://localhost:5117/API/Products/DeleteProduct", content);
+                if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+                {
+                    return true;
+                }
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+                else
+                {
+                    var error = await response.Content.ReadAsStringAsync();
+                    MessageBox.Show($"Ошибка удаления: {error}");
                     return false;
                 }
             }
