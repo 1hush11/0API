@@ -152,7 +152,7 @@ namespace _0auth.Controllers
             {
                 context.Products.Remove(existingProduct);
                 await context.SaveChangesAsync();
-                return Ok($"Товар с артикулом {id} удалён.");
+                return Ok($"Товар с артикулом {id} удалён");
             }
             else
                 return StatusCode(500, "Ошибка при удалении продукта.");
